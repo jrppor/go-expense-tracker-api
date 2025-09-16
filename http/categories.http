@@ -1,0 +1,83 @@
+
+# REST Client variables
+# Default: Docker Compose API mapping (host 8080)
+@baseUrl = http://localhost:8080
+# If running API locally (go run) on 8081, uncomment:
+# @baseUrl = http://localhost:8081
+
+# Notes:
+# - name and slug must be unique among ACTIVE categories.
+# - Soft-deleted rows (deleted_at not null) do not block creating a new one with the same name/slug.
+# - If a duplicate active name/slug is sent, API returns 409 Conflict.
+
+# List categories
+GET {{baseUrl}}/categories
+###
+
+# Create category: Food
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "อาหาร",
+  "slug": "food",
+  "description": "ค่าใช้จ่ายด้านอาหาร",
+  "color": "#FF8C00",
+  "icon": "mdi-food",
+  "is_active": true
+}
+###
+
+# Create category: เครื่องดื่ม (Beverage)
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "เครื่องดื่ม",
+  "slug": "beverage",
+  "description": "ค่าเครื่องดื่ม",
+  "color": "#00BCD4",
+  "icon": "mdi-glass-wine",
+  "is_active": true
+}
+###
+
+# Create category: เดินทาง (Transport)
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "เดินทาง",
+  "slug": "transport",
+  "description": "ค่าเดินทาง/ค่าน้ำมัน",
+  "color": "#2196F3",
+  "icon": "mdi-car",
+  "is_active": true
+}
+###
+
+# Create category: สาธารณูปโภค (Utilities)
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "สาธารณูปโภค",
+  "slug": "utilities",
+  "description": "ค่าน้ำ/ค่าไฟ/ค่าอินเทอร์เน็ต",
+  "color": "#4CAF50",
+  "icon": "mdi-flash",
+  "is_active": true
+}
+###
+
+
+# Get category by id
+GET {{baseUrl}}/categories/1
+Content-Type: application/json
+
+###
+
+# Delete category by id
+DELETE  {{baseUrl}}/categories/1
+Content-Type: application/json
+

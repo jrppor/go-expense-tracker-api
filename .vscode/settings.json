@@ -1,0 +1,27 @@
+{
+        "editor.quickSuggestions": {
+                "other": true,
+                        "comments": true,
+                                "strings": true
+                                    },
+                                        "editor.suggestOnTriggerCharacters": true,
+                                            "editor.inlineSuggest.enabled": false,
+                                                "editor.acceptSuggestionOnEnter": "off",
+                                                    "editor.tabCompletion": "off",
+                                                        "editor.parameterHints.enabled": true,
+                                                            "editor.wordBasedSuggestions": "matchingDocuments",
+                                                                "editor.autoClosingBrackets": "always",
+                                                                    "editor.autoClosingQuotes": "always",
+                                                                        "github.copilot.enable": {
+                                                                                "*": true
+                                                                                    },
+                                                                                        // Workspace theme settings
+                                                                                            // Use One Dark Pro Darker if installed
+                                                                                                "workbench.colorTheme": "One Dark Pro Darker",
+                                                                                                    "workbench.iconTheme": "material-icon-theme",
+                                                                                                        // Auto switch with OS appearance; VS Code will use the preferred themes below
+                                                                                                            "window.autoDetectColorScheme": true,
+                                                                                                                "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
+                                                                                                                    "workbench.preferredLightColorTheme": "Default Light+"
+                                                                                                                    }
+}

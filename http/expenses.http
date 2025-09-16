@@ -1,0 +1,46 @@
+
+# REST Client variables
+# Default: Docker Compose API mapping (host 8080)
+@baseUrl = http://localhost:8080
+# If running API locally (go run) on 8081, uncomment:
+# @baseUrl = http://localhost:8081
+
+GET {{baseUrl}}/expenses
+###
+
+POST {{baseUrl}}/expenses
+Content-Type: application/json
+
+{
+  "category_id": 10,
+  "amount": 100,
+  "description": "ข้าวกะเพราหมูสับ",
+  "payment_method": "เงินสด",
+  "tags": "lunch",
+  "date": "2025-09-12"
+}
+###
+
+PUT {{baseUrl}}/expenses/8
+Content-Type: application/json
+
+{
+  "category_id": 10,
+  "amount": 156.75,
+  "description": "ข้าวมันไก่เจ้าเดิม",
+  "payment_method": "เงินสด",
+  "tags": "lunch",
+  "date": "2025-09-12"
+}
+
+###
+
+GET {{baseUrl}}/expenses/8
+Content-Type: application/json
+
+
+###
+
+DELETE  {{baseUrl}}/expenses/6
+Content-Type: application/json
+
